@@ -1,0 +1,175 @@
+MyLayout:
+    orientation: "vertical"
+    pos_hint: {'center_x':.5}
+    MDBottomNavigation:
+        MDBottomNavigationItem:
+            text: "food text"
+            name: "food"
+            icon: "food"
+            BoxLayout:
+                id: menu_food
+                size: root.size
+                orientation: 'vertical'
+                GridLayout:
+
+                    #canvas:
+                    #    Color:
+                    #        rgba: 0, 0, 0, 0
+                    #    Rectangle: #woohoo!!!
+                    #        size: root.size
+                    #        pos: self.pos
+                    cols : 2
+                    spacing: 50,10
+                    padding: 10
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "2dp"
+                        size_hint: None, None
+
+                        MDLabel:
+                            font_style :"Button"
+                            text: "Latte"
+                            theme_text_color: "Secondary"
+                            size_hint_y: .2
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        FitImage:
+                            size_hint_y: .8
+                            source: "latte.jpg"
+                        MDSeparator:
+                            height: "1dp"
+                        BoxLayout:
+                            size_hint_y: .2
+                            orientation: 'horizontal'
+                            MDLabel:
+
+                                font_style :"Caption"
+                                size_hint_y: None
+                                height: self.texture_size[1]
+                                text: "£2.90"
+                            MDLabel:
+                                font_style :"Caption"
+                                size_hint_y: None
+                                height: self.texture_size[1]
+                                halign: 'right'
+                                text: "ADD"
+
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        size_hint: None, None
+                        size: self.size
+
+                        MDLabel:
+                            text: "Cappuccino"
+                            theme_text_color: "Secondary"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        FitImage:
+                            source: "cappuccino.jpg"
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        size_hint: None, None
+                        size: self.size
+
+                        MDLabel:
+                            text: "Title"
+                            theme_text_color: "Secondary"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        MDLabel:
+                            text: "Body"
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        size_hint: None, None
+                        size: self.size
+
+                        MDLabel:
+                            text: "Title"
+                            theme_text_color: "Secondary"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        MDLabel:
+                            text: "Body"
+
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        size_hint: None, None
+                        size: self.size
+
+                        MDLabel:
+                            text: "Title"
+                            theme_text_color: "Secondary"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        MDLabel:
+                            text: "Body"
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        size_hint: None, None
+                        size: self.size
+                        MDLabel:
+                            text: "Title"
+                            theme_text_color: "Secondary"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        MDLabel:
+                            text: "Body"
+
+        MDBottomNavigationItem:
+            text: "drink"
+            name: "drink"
+            icon: "bottle-soda"
+            BoxLayout:
+                id: menu_drinks
+                size: root.size
+                orientation: 'vertical'
+                Button:
+                    text: "drinks"
+        MDBottomNavigationItem:
+            text: "snacks"
+            name: "snacks"
+            icon: "bottle-soda"
+            BoxLayout:
+                id: menu_snacks
+                size: root.size
+                orientation: 'vertical'
+                Button:
+                    text: "snacks"
+        MDBottomNavigationItem:
+            text: "payment"
+            name: "payment"
+            icon: "bottle-soda"
+            BoxLayout:
+                id: menu_payment
+                size: root.size
+                orientation: 'vertical'
+                Button:
+                    text: "payment"

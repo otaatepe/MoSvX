@@ -1,0 +1,159 @@
+MyLayout:
+    orientation: "vertical"
+    pos_hint: {'center_x':.5}
+    scr_mngr : scr_mngr
+
+    ScreenManager:
+        id: scr_mngr
+        Screen:
+            name : 'screen1'
+
+            BoxLayout:
+                id: menu_drinks
+                size: root.size
+                orientation: 'vertical'
+                GridLayout:
+
+                    #canvas:
+                    #    Color:
+                    #        rgba: 0, 0, 0, 0
+                    #    Rectangle: #woohoo!!!
+                    #        size: root.size
+                    #        pos: self.pos
+                    cols : 2
+                    spacing: 50,10
+                    padding: 10
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "2dp"
+                        size_hint: None, None
+
+                        MDLabel:
+                            font_style :"Button"
+                            text: "Latte"
+                            theme_text_color: "Secondary"
+                            size_hint_y: .2
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        FitImage:
+                            size_hint_y: .8
+                            source: "latte.jpg"
+                        MDSeparator:
+                            height: "1dp"
+                        BoxLayout:
+                            size_hint_y: .2
+                            orientation: 'horizontal'
+                            MDLabel:
+
+                                font_style :"Caption"
+                                size_hint_y: None
+                                height: self.texture_size[1]
+                                text: "£2.90"
+                            MDLabel:
+                                font_style :"Caption"
+                                size_hint_y: None
+                                height: self.texture_size[1]
+                                halign: 'right'
+                                text: "ADD"
+
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        size_hint: None, None
+                        size: self.size
+
+                        MDLabel:
+                            text: "Cappuccino"
+                            theme_text_color: "Secondary"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        FitImage:
+                            source: "cappuccino.jpg"
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        size_hint: None, None
+                        size: self.size
+
+                        MDLabel:
+                            text: "Title"
+                            theme_text_color: "Secondary"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        MDLabel:
+                            text: "Body"
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        size_hint: None, None
+                        size: self.size
+
+                        MDLabel:
+                            text: "Title"
+                            theme_text_color: "Secondary"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        MDLabel:
+                            text: "Body"
+
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        size_hint: None, None
+                        size: self.size
+
+                        MDLabel:
+                            text: "Title"
+                            theme_text_color: "Secondary"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        MDLabel:
+                            text: "Body"
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        size_hint: None, None
+                        size: self.size
+                        MDLabel:
+                            text: "Title"
+                            theme_text_color: "Secondary"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        MDLabel:
+                            text: "Body"
+
+        Screen:
+            name: 'screen2'
+            MDLabel:
+                text: "screen 2"
+                halign: 'center'
+
+    MDBottomAppBar:
+        MDToolbar:
+            icon: "basket"
+            type: "bottom"
+            left_action_items: [["food", lambda x: root.change_screen('screen1') ], ["coffee", lambda x:root.change_screen('screen2')]]
+            mode: "free-end"

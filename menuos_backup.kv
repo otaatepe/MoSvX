@@ -1,0 +1,147 @@
+MyLayout:
+    orientation: "vertical"
+    pos_hint: {'center_x':.5}
+    scr_mngr : scr_mngr
+
+    ScreenManager:
+        id: scr_mngr
+        Screen:
+            name : 'screen1'
+
+            BoxLayout:
+
+                GridLayout:
+                    cols : 2
+                    spacing: 10,10
+                    padding : 10,10
+
+
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        size_hint: None, None
+                        size: "150dp", "120dp"
+
+                        MDLabel:
+                            text: "Latte"
+                            theme_text_color: "Secondary"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        FitImage:
+                            source: "coffee.jpg"
+                        MDSeparator:
+                            height: "1dp"
+                        BoxLayout:
+                            orientation: 'horizontal'
+                            MDLabel:
+                                size_hint_y: None
+                                height: self.texture_size[1]
+                                text: "£2.90"
+                            MDLabel:
+                                size_hint_y: None
+                                height: self.texture_size[1]
+                                halign: 'right'
+                                text: "ADD"
+
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        size_hint: None, None
+                        size: "150dp", "120dp"
+
+                        MDLabel:
+                            text: "Title"
+                            theme_text_color: "Secondary"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        MDLabel:
+                            text: "Body"
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        size_hint: None, None
+                        size: "150dp", "100dp"
+
+                        MDLabel:
+                            text: "Title"
+                            theme_text_color: "Secondary"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        MDLabel:
+                            text: "Body"
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        size_hint: None, None
+                        size: "150dp", "100dp"
+
+                        MDLabel:
+                            text: "Title"
+                            theme_text_color: "Secondary"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        MDLabel:
+                            text: "Body"
+
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        size_hint: None, None
+                        size: "150dp", "100dp"
+
+                        MDLabel:
+                            text: "Title"
+                            theme_text_color: "Secondary"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        MDLabel:
+                            text: "Body"
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        size_hint: None, None
+                        size: "150dp", "100dp"
+
+                        MDLabel:
+                            text: "Title"
+                            theme_text_color: "Secondary"
+                            size_hint_y: None
+                            height: self.texture_size[1]
+
+                        MDSeparator:
+                            height: "1dp"
+
+                        MDLabel:
+                            text: "Body"
+
+        Screen:
+            name: 'screen2'
+            MDLabel:
+                text: "screen 2"
+                halign: 'center'
+    MDBottomAppBar:
+        MDToolbar:
+            icon: "basket"
+            type: "bottom"
+            left_action_items: [["food", lambda x: root.change_screen('screen1') ], ["coffee", lambda x:root.change_screen('screen2')]]
+            mode: "free-end"
